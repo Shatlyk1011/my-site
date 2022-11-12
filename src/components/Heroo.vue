@@ -35,12 +35,12 @@ export default {
 <style lang="scss" scoped>
 .container {
   width: 100%;
-  min-height: 86.5rem;
-  // height: 100%;
+  min-height: 101.5rem;
+  // height: 100vh;
 
   @media (max-width: 1250px) {
     & {
-      min-height: 76.5rem;
+      min-height: 83.5rem;
     }
   }
 
@@ -58,7 +58,7 @@ export default {
       rgba(0, 0, 0, 0.6)
     ),
     url("../assets/img/main-bg.jpg");
-  background-position: 0% 20%;
+  background-position: top;
   background-size: cover;
 
   position: absolute;
@@ -71,6 +71,7 @@ export default {
   @media (max-width: 900px) {
     & {
       max-height: 65rem;
+      background-position: 50% 20%;
     }
   }
   @media (max-width: 600px) {
@@ -80,8 +81,9 @@ export default {
   }
 
   &__descr {
-    margin-top: 22rem;
-    margin-left: 33rem;
+    margin: 22rem 0 20rem 33rem;
+    // margin-top: 22rem;
+    // margin-left: 33rem;
     max-width: 37rem;
 
     @media (max-width: 1250px) {

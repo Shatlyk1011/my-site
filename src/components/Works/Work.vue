@@ -196,6 +196,16 @@ export default {
   padding: 1.2rem 2.4rem;
   display: flex;
   justify-content: center;
+  @media (max-width: 1250px) {
+    & {
+      margin-top: -4.8rem;
+    }
+  }
+  @media (max-width: 600px) {
+    & {
+      margin-top: -3.2rem;
+    }
+  }
 
   &__cont {
     display: flex;
