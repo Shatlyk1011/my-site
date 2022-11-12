@@ -93,7 +93,7 @@ export default {
     display: flex;
     list-style: none;
     font-family: "Source Sans Pro", sans-serif;
-    font-size: 2.25rem;
+    font-size: 1.8rem;
     font-weight: 400;
     color: #eee;
     @media (max-width: 600px) {

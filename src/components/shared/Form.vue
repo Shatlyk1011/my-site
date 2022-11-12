@@ -1,7 +1,7 @@
 <template>
   <div class="modal">
     <button class="close-modal" @click="modal">&times;</button>
-    <form @submit.prevent="submitForm" class="form" name="feedback" netlify>
+    <form @submit="submitForm" class="form" name="form" netlify>
       <h3 class="form__heading">Обратная связь</h3>
       <div class="form__group">
         <input
