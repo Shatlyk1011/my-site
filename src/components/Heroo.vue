@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="hero">
     <div class="hero">
       <div class="hero__descr">
         <h1 class="heading-primary">
@@ -11,7 +11,7 @@
           <br />
           "Frontend developer". Люблю делать качественные работы!
         </p>
-        <Button text="Мои работы" type="primary" />
+        <Button v-scroll-to="'#works'" text="Мои работы" type="primary" />
         <WebLinks class="links" />
       </div>
     </div>

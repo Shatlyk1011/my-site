@@ -1,6 +1,6 @@
 <template>
   <div class="lw-container">
-    <div class="contact">
+    <div class="contact" id="contact">
       <h3 class="contact__heading">Давайте работать вместе!</h3>
       <div class="contact__descr">
         Если вам понравились мои работы, то пожалуйста дайте обратную связь!!
@@ -9,11 +9,7 @@
         <Button text="Оставить контакты" @click="modalWindow" />
       </div>
     </div>
-    <ModalWindow
-      :submitForm="submitForm"
-      :modal="modalWindow"
-      v-if="showModal"
-    />
+    <Form :submitForm="submitForm" :modal="modalWindow" v-if="showModal" />
     <ThankYouModal :closeThankYou="closeThankYou" v-if="showThankYou" />
   </div>
 </template>
@@ -21,14 +17,14 @@
 <script>
 import { ref } from "vue";
 
-import ModalWindow from "@/components/shared/ModalWindow.vue";
+import Form from "@/components/shared/Form.vue";
 import ThankYouModal from "@/components/shared/ThankYouModal.vue";
 import Button from "@/components/shared/Button.vue";
 
 export default {
   name: "LetsWork",
   components: {
-    ModalWindow,
+    Form,
     ThankYouModal,
     Button,
   },

@@ -15,7 +15,7 @@
     <div class="more">
       <div class="more__cont">
         <div class="more__text">
-          Еще больше работ вы сможете найти перейдя по этой
+          Вы можете найти еще больше моих работ перейдя по этой
           <a
             target="_blank"
             class="more__link"

@@ -1,10 +1,12 @@
 <template>
-  <nav class="nav">
+  <nav class="nav" id="nav">
     <div class="logo"><span>Shat</span> AB</div>
     <div class="nav-menu">
       <ul class="nav-menu__lists">
         <li v-for="menuItem in menuItems" :key="menuItem.text">
-          <a class="nav-menu__list" :to="menuItem.url"> {{ menuItem.text }}</a>
+          <a class="nav-menu__list" v-scroll-to="menuItem.id">
+            {{ menuItem.text }}</a
+          >
         </li>
       </ul>
     </div>
@@ -18,16 +20,11 @@ export default {
   data() {
     return {
       menuItems: [
-        { text: "Работы", url: "/work" },
-        { text: "Инструменты", url: "/tools" },
-        { text: "Контакты", url: "/contacts" },
+        { text: "Работы", id: "#works" },
+        // { text: "Резюме", id: "#contact" },
+        { text: "Контакты", id: "#contact" },
       ],
     };
-  },
-  computed: {
-    active() {
-      return {};
-    },
   },
 };
 </script>
@@ -36,7 +33,7 @@ export default {
 .nav {
   display: flex;
   justify-content: space-between;
-  padding: 3rem 11rem 5rem 8rem;
+  padding: 3rem 20rem 5rem;
   font-size: 2.4rem;
   z-index: 1000;
   position: relative;
@@ -73,7 +70,7 @@ export default {
     color: #eee;
 
     & li:not(:last-child) {
-      margin-right: 3rem;
+      margin-right: 4rem;
     }
   }
 

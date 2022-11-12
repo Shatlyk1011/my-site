@@ -27,7 +27,7 @@ export default {
     gap: 2.4rem;
     justify-content: flex-start;
     text-align: center;
-    z-index: 222222;
+    z-index: 999;
     position: relative;
     // margin-top: auto;
   }

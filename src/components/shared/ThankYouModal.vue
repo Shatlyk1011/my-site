@@ -6,7 +6,13 @@
         За ваш интерес. Я с вами свяжусь в ближайшее время
       </p>
 
-      <button class="thanks__close" @click="closeThankYou">закрыть</button>
+      <button
+        class="thanks__close"
+        @click="closeThankYou"
+        v-scroll-to="'#hero'"
+      >
+        закрыть
+      </button>
     </div>
   </div>
 
@@ -35,7 +41,7 @@ export default {
   padding: 3.2rem 4.8rem;
   border-radius: 2px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-  z-index: 2;
+  z-index: 1500;
 }
 
 .wrap {
@@ -52,9 +58,9 @@ export default {
   font-weight: 600;
 
   &__text {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 400;
-    line-height: 1.3;
+    line-height: 1.4;
     color: #252525;
   }
 
@@ -101,9 +107,9 @@ export default {
   top: -100%;
   left: 0;
   width: 100%;
-  height: 200%;
+  height: 229%;
   background-color: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(7px);
-  z-index: 1;
+  z-index: 1000;
 }
 </style>

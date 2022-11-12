@@ -1,10 +1,11 @@
 <template>
   <div class="modal">
     <button class="close-modal" @click="modal">&times;</button>
-    <form @submit.prevent="submitForm" class="form">
+    <form @submit.prevent="submitForm" class="form" name="feedback" netlify>
       <h3 class="form__heading">Обратная связь</h3>
       <div class="form__group">
         <input
+          name="Имя"
           class="form__input"
           type="text"
           id="name"
@@ -15,6 +16,7 @@
       </div>
       <div class="form__group">
         <input
+          name="Телефон"
           class="form__input"
           type="text"
           id="hh-page"
@@ -24,6 +26,7 @@
       </div>
       <div class="form__group">
         <input
+          name="Социальная сеть"
           class="form__input"
           type="text"
           id="webpage"
@@ -64,7 +67,7 @@ export default {
   padding: 4.8rem 3.2rem;
   border-radius: 2px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-  z-index: 2;
+  z-index: 2000;
 }
 
 .form {
@@ -105,10 +108,10 @@ export default {
     }
     &:focus {
       box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
-      border-bottom: 3px solid #008f00;
+      border-bottom: 3px solid #589c58;
     }
     &:focus:invalid {
-      border-bottom: 3px solid #d00000;
+      border-bottom: 3px solid #ff5d5d;
     }
   }
 
@@ -152,9 +155,9 @@ export default {
   top: -100%;
   left: 0;
   width: 100%;
-  height: 200%;
+  height: 229%;
   background-color: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(5px);
-  z-index: 1;
+  z-index: 1000;
 }
 </style>

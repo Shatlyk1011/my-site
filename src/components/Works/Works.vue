@@ -1,5 +1,5 @@
 <template>
-  <div class="u-tac">
+  <div class="u-tac" id="works">
     <h2>Работы</h2>
   </div>
   <Work />
