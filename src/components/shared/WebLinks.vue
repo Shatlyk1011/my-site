@@ -25,6 +25,12 @@
   display: flex;
   gap: 3.6rem;
   list-style: none;
+
+  @media (max-width: 900px) {
+    & {
+      justify-content: center;
+    }
+  }
 }
 
 .icon {

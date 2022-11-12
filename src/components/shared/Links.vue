@@ -29,6 +29,7 @@ export default {
     text-align: center;
     z-index: 999;
     position: relative;
+
     // margin-top: auto;
   }
   &__link {

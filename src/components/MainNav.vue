@@ -36,7 +36,24 @@ export default {
   padding: 3rem 20rem 5rem;
   font-size: 2.4rem;
   z-index: 1000;
-  position: relative;
+  position: absolute;
+  width: 100%;
+
+  @media (max-width: 1250px) {
+    & {
+      padding: 3rem 10rem 5rem;
+    }
+  }
+  @media (max-width: 900px) {
+    & {
+      padding: 2rem 8rem 3rem;
+    }
+  }
+  @media (max-width: 600px) {
+    & {
+      padding: 2rem 4rem 3rem;
+    }
+  }
 }
 
 .logo {
@@ -47,6 +64,17 @@ export default {
   color: #fff;
   text-decoration: none;
   cursor: pointer;
+
+  @media (max-width: 600px) {
+    & {
+      font-size: 3.2rem;
+    }
+  }
+  @media (max-width: 360px) {
+    & {
+      font-size: 2.4rem;
+    }
+  }
 
   & span {
     color: #fba820;
@@ -65,12 +93,28 @@ export default {
     display: flex;
     list-style: none;
     font-family: "Source Sans Pro", sans-serif;
-    font-size: 1.6rem;
+    font-size: 2.25rem;
     font-weight: 400;
     color: #eee;
+    @media (max-width: 600px) {
+      & {
+        font-size: 1.6rem;
+      }
+    }
+    @media (max-width: 360px) {
+      & {
+        font-size: 1.4rem;
+      }
+    }
 
     & li:not(:last-child) {
       margin-right: 4rem;
+
+      @media (max-width: 600px) {
+        & {
+          margin-right: 2.4rem;
+        }
+      }
     }
   }
 

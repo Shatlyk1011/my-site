@@ -36,12 +36,19 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 25%;
+  width: 30%;
   background-color: #fba820;
   padding: 3.2rem 4.8rem;
   border-radius: 2px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 1500;
+
+  @media (max-width: 1250px) {
+    width: 50%;
+  }
+  @media (max-width: 600px) {
+    width: 75%;
+  }
 }
 
 .wrap {
@@ -60,8 +67,11 @@ export default {
   &__text {
     font-size: 1.8rem;
     font-weight: 400;
-    line-height: 1.4;
+    line-height: 1.2;
     color: #252525;
+    @media (max-width: 600px) {
+      line-height: 1.2;
+    }
   }
 
   &__close {
@@ -107,9 +117,13 @@ export default {
   top: -100%;
   left: 0;
   width: 100%;
-  height: 229%;
+  height: 230%;
   background-color: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(7px);
   z-index: 1000;
+
+  @media (max-width: 900px) {
+    height: 260%;
+  }
 }
 </style>

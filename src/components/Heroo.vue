@@ -1,6 +1,7 @@
 <template>
   <div class="container" id="hero">
     <div class="hero">
+      <!-- <div class="hehe"> -->
       <div class="hero__descr">
         <h1 class="heading-primary">
           Привет, Я <br />
@@ -14,6 +15,7 @@
         <Button v-scroll-to="'#works'" text="Мои работы" type="primary" />
         <WebLinks class="links" />
       </div>
+      <!-- </div> -->
     </div>
   </div>
 </template>
@@ -33,9 +35,22 @@ export default {
 <style lang="scss" scoped>
 .container {
   width: 100%;
-  min-height: 73.6rem;
+  min-height: 86.5rem;
   // height: 100%;
+
+  @media (max-width: 1250px) {
+    & {
+      min-height: 76.5rem;
+    }
+  }
+
+  @media (max-width: 900px) {
+    & {
+      min-height: 65rem;
+    }
+  }
 }
+
 .hero {
   background: linear-gradient(
       to left top,
@@ -43,7 +58,7 @@ export default {
       rgba(0, 0, 0, 0.6)
     ),
     url("../assets/img/main-bg.jpg");
-  background-position: top;
+  background-position: 0% 20%;
   background-size: cover;
 
   position: absolute;
@@ -53,19 +68,68 @@ export default {
 
   width: 100%;
 
+  @media (max-width: 900px) {
+    & {
+      max-height: 65rem;
+    }
+  }
+  @media (max-width: 600px) {
+    & {
+      background-position: 75% 100%;
+    }
+  }
+
   &__descr {
     margin-top: 22rem;
     margin-left: 33rem;
     max-width: 37rem;
+
+    @media (max-width: 1250px) {
+      & {
+        margin-left: 23rem;
+        margin-top: 20rem;
+      }
+    }
+    @media (max-width: 900px) {
+      & {
+        margin-left: 12rem;
+        margin-top: 15rem;
+
+        text-align: center;
+
+        margin: 15rem auto 15rem;
+      }
+    }
+    @media (max-width: 600px) {
+      & {
+        text-align: center;
+        margin: 15rem auto 15rem;
+        // margin-top: 15rem;
+      }
+    }
   }
 }
 .heading-primary {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 7rem;
+  font-size: 7.2rem;
   font-weight: 700;
   color: #fff;
   line-height: 1.1;
   letter-spacing: 2px;
+
+  @media (max-width: 1250px) {
+    font-size: 4.8rem;
+  }
+  @media (max-width: 600px) {
+    & {
+      font-size: 3.8rem;
+    }
+  }
+  @media (max-width: 360px) {
+    & {
+      font-size: 3.2rem;
+    }
+  }
 
   & span {
     color: #fba820;
@@ -80,10 +144,26 @@ export default {
     color: #f7f7f7;
     line-height: 1.5;
     margin-bottom: 7.4rem;
+    @media (max-width: 1250px) {
+      margin-bottom: 4.8rem;
+    }
+    @media (max-width: 900px) {
+      & {
+        font-size: 1.6rem;
+
+        width: 100%;
+      }
+    }
   }
 }
 
 .links {
   margin: 15rem 0 5rem 0.5rem;
+
+  @media (max-width: 1250px) {
+    & {
+      margin: 7rem 0 13rem;
+    }
+  }
 }
 </style>

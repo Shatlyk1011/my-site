@@ -3,17 +3,18 @@
     <footer class="footer">
       <div class="contacts">
         <div class="mail">
-          <span>Email: </span>
+          <span>Email: </span> <br />
           <a href="mailto:shatlykabdullayev@mail.ru"
             >shatlykabdullayev@mail.ru</a
           >
         </div>
         <div class="phone">
-          <span>Телефон:</span> <a href="tel:+79965177225">+79965177225</a>
+          <span>Телефон:</span> <br />
+          <a href="tel:+79965177225">+79965177225</a>
         </div>
       </div>
       <div class="footer__descr">
-        <WebLinks />
+        <WebLinks class="social-links" />
         <div class="footer__rights">&#169; 2022 Все права защищены.</div>
       </div>
     </footer>
@@ -35,42 +36,32 @@ export default {
   position: relative;
 }
 
-.contacts {
-  font-size: 1.4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.4rem;
-  align-items: flex-start;
-
-  & span {
-    font-weight: 600;
-    letter-spacing: 0.8px;
-  }
-
-  & a:link,
-  a:visited {
-    text-decoration: none;
-    color: #fba820;
-    border-bottom: 1px solid transparent;
-    transition: all 0.2s;
-    letter-spacing: 0.4px;
-
-    &:hover {
-      border-bottom: 1px solid #fba820;
-    }
-  }
-}
-
 .footer {
   margin: 0 25rem;
   border-top: 1px solid #3e3e3e;
   color: #fff;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 2rem;
-  column-gap: 3rem;
   padding: 5rem 10rem;
+
+  @media (max-width: 1250px) {
+    & {
+      margin: 0 15rem;
+      padding: 3rem 5rem;
+    }
+  }
+  @media (max-width: 900px) {
+    & {
+      grid-template-columns: 1fr;
+      gap: 1.6rem;
+      margin: 0 5rem;
+    }
+  }
+  @media (max-width: 360px) {
+    & {
+      margin: 0;
+    }
+  }
   &__descr {
     display: flex;
     justify-content: space-between;
@@ -79,6 +70,13 @@ export default {
 
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 900px) {
+      & {
+        text-align: center;
+        justify-self: center;
+      }
+    }
   }
 
   &__rights {
@@ -107,7 +105,53 @@ export default {
   }
 }
 
+.contacts {
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+  align-items: flex-start;
+  @media (max-width: 900px) {
+    & {
+      text-align: center;
+      align-items: center;
+    }
+  }
+
+  & span {
+    font-weight: 600;
+    letter-spacing: 0.8px;
+  }
+
+  & a:link,
+  a:visited {
+    text-decoration: none;
+    color: #fba820;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s;
+    letter-spacing: 0.4px;
+
+    &:hover {
+      border-bottom: 1px solid #fba820;
+    }
+  }
+}
+
+.mail,
+.phone {
+  line-height: 1.5;
+}
+
 .no-margin {
   margin: 0;
+}
+
+.social-links {
+  @media (max-width: 900px) {
+    & {
+      margin: 0 auto;
+    }
+  }
 }
 </style>

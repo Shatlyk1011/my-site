@@ -6,7 +6,7 @@
         <div class="work__text">
           {{ work.descr }}
         </div>
-        <Links :site="work.site" :github="work.github" />
+        <Links :site="work.site" :github="work.github" class="links" />
       </div>
       <div class="work__image">
         <img :src="work.img" alt="Image 1" class="img" />
@@ -15,12 +15,12 @@
     <div class="more">
       <div class="more__cont">
         <div class="more__text">
-          Вы можете найти еще больше моих работ перейдя по этой
+          Еще больше на
           <a
             target="_blank"
             class="more__link"
             href="https://github.com/Shatlyk1011"
-            >ссылке.</a
+            >GitHub</a
           >
         </div>
       </div>
@@ -51,6 +51,22 @@ export default {
 .container {
   background-color: #e9ecef;
   padding: 7.2rem 9.8rem;
+
+  @media (max-width: 1250px) {
+    & {
+      padding: 4.8rem;
+    }
+  }
+  @media (max-width: 900px) {
+    & {
+      display: flex;
+      flex-direction: column;
+      padding: 3.2rem;
+    }
+    &:not(:last-child) {
+      gap: 9.6rem;
+    }
+  }
 }
 
 .work {
@@ -62,26 +78,78 @@ export default {
   &:not(:last-child) {
     margin-bottom: 7.2rem;
   }
+  @media (max-width: 1250px) {
+    & {
+      gap: 4.8rem;
+    }
+    &:not(:last-child) {
+      margin-bottom: 6.4rem;
+    }
+  }
+
+  @media (max-width: 900px) {
+    & {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+    }
+    &:not(:last-child) {
+      margin-bottom: 4.8rem;
+    }
+  }
+  @media (max-width: 600px) {
+    & {
+      gap: 1.6rem;
+    }
+  }
 
   &__descr {
     display: flex;
     flex-direction: column;
-    gap: 3.2rem;
+    gap: 2.4rem;
     // align-items: center;
     justify-content: center;
     padding: 0 2.4rem;
+
+    @media (max-width: 1250px) {
+      & {
+        padding: 0;
+      }
+    }
+    @media (max-width: 900px) {
+      & {
+        gap: 1.2rem;
+      }
+    }
+    @media (max-width: 900px) {
+      & {
+        text-align: center;
+      }
+    }
   }
 
   &__title {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 3.2rem;
-    font-weight: 500;
+    font-weight: 600;
+
+    @media (max-width: 900px) {
+      & {
+        font-size: 2.8rem;
+      }
+    }
   }
 
   &__text {
     font-size: 2.25rem;
     font-weight: 400;
     line-height: 1.5;
+
+    @media (max-width: 900px) {
+      & {
+        font-size: 1.8rem;
+      }
+    }
 
     & span {
       font-family: "Source Sans Pro", sans-serif;
@@ -98,11 +166,26 @@ export default {
 
   &__image {
     max-height: 40rem;
+    display: flex;
+    align-items: center;
 
     & img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+    @media (max-width: 1250px) {
+      & {
+        height: 70%;
+        align-self: center;
+      }
+    }
+
+    @media (max-width: 900px) {
+      & {
+        height: 75%;
+        align-self: center;
+      }
     }
   }
 }
@@ -142,10 +225,18 @@ export default {
 
 .order {
   order: 1;
+  @media (max-width: 900px) {
+    order: 0;
+  }
 }
 
 .orderGrid {
-  display: grid !important;
-  grid-template-columns: 3fr 5fr !important;
+  grid-template-columns: 3fr 5fr;
+}
+
+.links {
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
 }
 </style>

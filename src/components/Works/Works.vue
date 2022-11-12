@@ -18,5 +18,11 @@ export default {
   padding: 2rem;
   margin: 0 4.8rem;
   border-bottom: 2px solid #252525;
+
+  @media (max-width: 900px) {
+    & {
+      margin: 0 2.4rem;
+    }
+  }
 }
 </style>

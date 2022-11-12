@@ -68,6 +68,17 @@ export default {
   border-radius: 2px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 2000;
+
+  @media (max-width: 1250px) {
+    width: 45%;
+  }
+  @media (max-width: 900px) {
+    width: 65%;
+  }
+  @media (max-width: 600px) {
+    width: 85%;
+    padding: 4.8rem 0;
+  }
 }
 
 .form {
@@ -80,8 +91,12 @@ export default {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 600;
     font-size: 3.2rem;
-    margin-right: 2rem;
-    margin-bottom: 1.6rem;
+    line-height: 1.4;
+    margin-bottom: 1.2rem;
+    @media (max-width: 600px) {
+      font-size: 2.8rem;
+      text-align: center;
+    }
   }
   &__group {
     font-size: 1.6rem;
@@ -155,9 +170,12 @@ export default {
   top: -100%;
   left: 0;
   width: 100%;
-  height: 229%;
+  height: 230%;
   background-color: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(5px);
   z-index: 1000;
+  @media (max-width: 900px) {
+    height: 260%;
+  }
 }
 </style>

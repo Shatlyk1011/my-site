@@ -56,18 +56,49 @@ export default {
   background-color: #252525;
   min-height: 52rem;
   position: relative;
+  @media (max-width: 1250px) {
+    & {
+      min-height: 45rem;
+    }
+  }
+  @media (max-width: 900px) {
+    & {
+      min-height: 37rem;
+    }
+  }
 }
 
 .contact {
   text-align: center;
   padding: 8rem 0 6rem 0;
   margin: 0 auto;
+
+  @media (max-width: 1250px) {
+    padding: 6rem 0 4rem 0;
+  }
+
+  @media (max-width: 900px) {
+    & {
+      padding: 4.2rem 2.4rem 3.2rem;
+    }
+  }
   &__heading {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 6.4rem;
     font-weight: 700;
     color: #eaeaea;
     letter-spacing: 1px;
+
+    @media (max-width: 1250px) {
+      & {
+        font-size: 4.8rem;
+      }
+    }
+    @media (max-width: 600px) {
+      & {
+        font-size: 3.2rem;
+      }
+    }
   }
 
   &__descr {
@@ -78,6 +109,12 @@ export default {
     margin-top: 2.2rem;
     max-width: 50rem;
     line-height: 1.5;
+    @media (max-width: 900px) {
+      & {
+        font-size: 1.6rem;
+        margin-top: 1.4rem;
+      }
+    }
   }
 }
 
@@ -86,5 +123,9 @@ export default {
   display: flex;
   gap: 2.4rem;
   justify-content: center;
+
+  @media (max-width: 900px) {
+    margin-top: 4.8rem;
+  }
 }
 </style>
