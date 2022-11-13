@@ -4,10 +4,20 @@
     <div class="nav-menu">
       <ul class="nav-menu__lists">
         <li v-for="menuItem in menuItems" :key="menuItem.text">
-          <a class="nav-menu__list" v-scroll-to="menuItem.id">
+          <a
+            :href="menuItem.link"
+            class="nav-menu__list"
+            v-scroll-to="menuItem.id"
+          >
             {{ menuItem.text }}</a
           >
         </li>
+        <a
+          target="_blank"
+          href="https://cloud.mail.ru/public/nxgN/vg8joTxAL"
+          class="nav-menu__list"
+          >Резюме</a
+        >
       </ul>
     </div>
   </nav>
@@ -21,7 +31,6 @@ export default {
     return {
       menuItems: [
         { text: "Работы", id: "#works" },
-        // { text: "Резюме", id: "#contact" },
         { text: "Контакты", id: "#contact" },
       ],
     };
@@ -51,38 +60,8 @@ export default {
   }
   @media (max-width: 600px) {
     & {
-      padding: 2rem 4rem 3rem;
+      padding: 2rem 3rem 3rem;
     }
-  }
-}
-
-.logo {
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 4.4rem;
-  font-weight: 400;
-  letter-spacing: -0.5px;
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer;
-
-  @media (max-width: 600px) {
-    & {
-      font-size: 3.2rem;
-    }
-  }
-  @media (max-width: 360px) {
-    & {
-      font-size: 2.4rem;
-    }
-  }
-
-  & span {
-    color: #fba820;
-  }
-
-  &__img {
-    height: 2.4rem;
-    width: 100%;
   }
 }
 
@@ -96,12 +75,10 @@ export default {
     font-size: 1.8rem;
     font-weight: 400;
     color: #eee;
-    @media (max-width: 600px) {
-      & {
-        font-size: 1.6rem;
-      }
+    @media (max-width: 900px) {
+      font-size: 1.6rem;
     }
-    @media (max-width: 360px) {
+    @media (max-width: 600px) {
       & {
         font-size: 1.4rem;
       }
@@ -109,10 +86,15 @@ export default {
 
     & li:not(:last-child) {
       margin-right: 4rem;
+      @media (max-width: 900px) {
+        & {
+          margin-right: 2.4rem;
+        }
+      }
 
       @media (max-width: 600px) {
         & {
-          margin-right: 2.4rem;
+          margin-right: 1.6rem;
         }
       }
     }
