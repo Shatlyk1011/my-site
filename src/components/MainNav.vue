@@ -63,6 +63,11 @@ export default {
       padding: 2rem 3rem 3rem;
     }
   }
+  @media (max-width: 360px) {
+    & {
+      padding: 1.6rem 2rem 2rem;
+    }
+  }
 }
 
 .nav-menu {
@@ -95,6 +100,11 @@ export default {
       @media (max-width: 600px) {
         & {
           margin-right: 1.6rem;
+        }
+      }
+      @media (max-width: 360px) {
+        & {
+          margin-right: 1rem;
         }
       }
     }
