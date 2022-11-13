@@ -3,7 +3,7 @@
     <div class="contact" id="contact">
       <h3 class="contact__heading">Давайте работать вместе!</h3>
       <div class="contact__descr">
-        Если вам понравились мои работы, то пожалуйста дайте обратную связь!!
+        Если вам понравились мои работы, то, пожалуйста, дайте обратную связь!
       </div>
       <div class="wrap-btn">
         <Button text="Оставить контакты" @click="modalWindow" />
