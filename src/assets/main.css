@@ -57,3 +57,15 @@ html {
   height: 2.4rem;
   width: 100%;
 }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

@@ -82,10 +82,8 @@ export default {
 
   &__descr {
     margin: 22rem 0 20rem 33rem;
-    // margin-top: 22rem;
-    // margin-left: 33rem;
     max-width: 37rem;
-
+    animation: moveInLeft 1s ease;
     @media (max-width: 1250px) {
       & {
         margin-left: 23rem;
