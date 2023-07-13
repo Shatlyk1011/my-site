@@ -1,2 +1,1 @@
-live: https://shatlyk-abdullayev.netlify.app/
-в разработке...
+live: https://shatlyk-abdullayev.netlify.app/ - demo
