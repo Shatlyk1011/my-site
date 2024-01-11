@@ -5,12 +5,12 @@
         <div class="mail">
           <span>Email: </span> <br />
           <a href="mailto:shatlykabdullayev@mail.ru"
-            >shatlykabdullayev@mail.ru</a
+            >helloworld@mail.ru</a
           >
         </div>
         <div class="phone">
           <span>Телефон:</span> <br />
-          <a href="tel:+79965177225">+79965177225</a>
+          <a href="tel:654">+88005553535</a>
         </div>
       </div>
       <div class="footer__descr">
